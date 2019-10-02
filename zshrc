@@ -12,6 +12,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+#Alias
+alias runwebgoat='cd ~/WebGoat && mvn -pl webgoat-server spring-boot:run'
+alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias peda='gdb'
+alias create_ap='sudo create_ap wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
+
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -41,7 +47,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #Outras configurações para mudança de cor
 ZSH_HIGHLIGHT_STYLES[default]=bold
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009,bold
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,bold
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=green,bold
 ZSH_HIGHLIGHT_STYLES[alias]=fg=green,bold
 ZSH_HIGHLIGHT_STYLES[builtin]=fg=green,bold
 ZSH_HIGHLIGHT_STYLES[function]=fg=green,bold
