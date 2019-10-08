@@ -45,6 +45,9 @@ PROMPT=" $PROMPT"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Outras configurações para mudança de cor
+#Cor 009 é o vermelho
+#Cor 214 é o laranja
+#Cor 063 é o azul
 ZSH_HIGHLIGHT_STYLES[default]=bold
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009,bold
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=green,bold
@@ -56,13 +59,13 @@ ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,underline
 ZSH_HIGHLIGHT_STYLES[commandseparator]=none
 ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
 ZSH_HIGHLIGHT_STYLES[path]=fg=214,underline
-ZSH_HIGHLIGHT_STYLES[globbing]=fg=063,bold
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=green,underline
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none,bold
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none,bold
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none,bold
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=063,bold
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=063,bold
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=009,bold
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009,bold
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=#e646ff,bold
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=#e646ff,bold
 ZSH_HIGHLIGHT_STYLES[assign]=none
