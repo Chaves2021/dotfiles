@@ -14,13 +14,19 @@ compinit
 
 #Alias
 alias runwebgoat='cd ~/WebGoat && mvn -pl webgoat-server spring-boot:run'
+
 alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
+
 alias peda='gdb'
-alias create_ap='sudo create_ap wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
+
+alias create_new_ap='sudo create_ap wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
+
 alias mute='pamixer -m'
 alias unmute='pamixer -u'
 alias get_volume='pamixer --get-volume-human'
 alias set_volume='pamixer --set-volume'
+
+alias set_brightness='xrandr --output eDP1 --brightness'
 
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
