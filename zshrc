@@ -19,7 +19,8 @@ alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias peda='gdb'
 
-alias create_new_ap='sudo create_ap wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
+#A flag -n é para não rotear a internet
+alias create_new_ap='sudo create_ap -n wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
 
 alias mute='pamixer -m'
 alias unmute='pamixer -u'
