@@ -1,2 +1,2 @@
-# dotfiles
-Arquivos ocultos da minha pasta home
+# Config Files
+Arquivos de configuração do meu SO
