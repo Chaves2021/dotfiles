@@ -185,4 +185,3 @@ bindsym $mod+x exec xfce4-screenshooter
 
 # Autostart
 exec_always --no-startup-id xfce4-clipman
-exec_always --no-startup-id numlockx on
