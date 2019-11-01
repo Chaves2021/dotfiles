@@ -179,9 +179,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-# Take a screenshot
-bindsym $mod+x exec xfce4-screenshooter
-
-# Autostart
-exec_always --no-startup-id xfce4-clipman
