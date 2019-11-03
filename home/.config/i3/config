@@ -179,3 +179,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Make mouse doesn't change windows focus
+focus_follows_mouse no
+
+bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
+bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
