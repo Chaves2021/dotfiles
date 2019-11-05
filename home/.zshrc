@@ -27,7 +27,7 @@ alias unmute='pamixer -u'
 alias get_volume='pamixer --get-volume-human'
 alias set_volume='pamixer --set-volume'
 
-alias set_brightness='xrandr --output eDP1 --brightness'
+alias set_brightness='xrandr --output eDP-1 --brightness'
 
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
