@@ -15,6 +15,8 @@ compinit
 #Alias
 alias runwebgoat='cd ~/WebGoat && mvn -pl webgoat-server spring-boot:run'
 
+alias runghidra='~/ghidra_9.1_PUBLIC/ghidraRun'
+
 alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias peda='gdb'
@@ -80,3 +82,6 @@ ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[assign]=none
+
+#Definindo variável de ambiente
+export TERMINAL=alacritty
