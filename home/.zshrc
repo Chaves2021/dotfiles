@@ -21,6 +21,8 @@ alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias peda='gdb'
 
+alias screen_mirror_off='xrandr --output eDP-1 --auto --output HDMI-1 --off'
+
 alias screen_mirror_note_off='xrandr --output eDP-1 --off --output HDMI-1 --mode 1024x768'
 
 alias screen_mirror_note_on='xrandr --output eDP-1 --auto --output HDMI-1 --mode 1024x768'
