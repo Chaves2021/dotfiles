@@ -21,20 +21,20 @@ alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
 alias peda='gdb'
 
-alias screen_mirror_off='xrandr --output eDP-1 --auto --output HDMI-1 --off'
-
-alias screen_mirror_note_off='xrandr --output eDP-1 --off --output HDMI-1 --mode 1024x768'
-
-alias screen_mirror_note_on='xrandr --output eDP-1 --auto --output HDMI-1 --mode 1024x768'
-#A flag -n é para não rotear a internet
+##A flag -n é para não rotear a internet
 alias create_new_ap='sudo create_ap -n wlp2s0 enp3s0 Ganesh_Wifi ganeshredes'
 
+##Audio Alias
 alias mute='pamixer -m'
 alias unmute='pamixer -u'
 alias get_volume='pamixer --get-volume-human'
 alias set_volume='pamixer --set-volume'
 
+##Screen alias
 alias set_brightness='xrandr --output eDP-1 --brightness'
+alias screen_mirror_off='xrandr --output eDP-1 --auto --output HDMI-1 --off'
+alias screen_mirror_note_off='xrandr --output eDP-1 --off --output HDMI-1 --mode 1024x768'
+alias screen_mirror_note_on='xrandr --output eDP-1 --auto --output HDMI-1 --mode 1024x768'
 
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
