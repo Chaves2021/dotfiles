@@ -176,7 +176,7 @@ bindsym $mod+r mode "resize"
 
 #Setting background
 #exec feh --bg-scale /usr/share/backgrounds/pop_os_0.png
-exec feh --bg-scale /usr/share/backgrounds/gatenho.jpg
+exec feh --bg-scale /usr/share/backgrounds/gatenho_2.jpg
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
