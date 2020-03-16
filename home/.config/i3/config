@@ -208,11 +208,19 @@ bar {
 	}
 }
 
+# No border
+default_border none
+default_floating_border none
+
 # Make mouse doesn't change windows focus
 focus_follows_mouse no
 
 bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
 bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
+
+# Configs for i3-gaps
+gaps inner 10
+gaps outer 10
 
 # Executing picom to add window change effect
 exec picom -f
