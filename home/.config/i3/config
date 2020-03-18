@@ -221,6 +221,7 @@ bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
 # Configs for i3-gaps
 gaps inner 10
 gaps outer 10
+smart_gaps on
 
 # Executing picom to add window change effect
 exec picom -f
