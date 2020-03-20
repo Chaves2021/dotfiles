@@ -177,7 +177,8 @@ bindsym $mod+r mode "resize"
 # Setting background
 output eDP-1
 {
-	bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+	#bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+	bg /usr/share/backgrounds/gatenho_2.jpg fill
 	resolution 1366x1080
 }
 
