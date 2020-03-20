@@ -141,11 +141,11 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+#bindsym $mod+Shift+c restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -174,9 +174,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#Setting background
-#exec feh --bg-scale /usr/share/backgrounds/pop_os_0.png
-exec feh --bg-scale /usr/share/backgrounds/gatenho_2.jpg
+# Setting background
+output eDP-1
+{
+	bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+	resolution 1366x1080
+}
+
+# Keyboard config
+input *
+{
+	xkb_layout "us"
+	xkb_variant "intl"
+	tap enabled
+	natural_scroll enabled
+}
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -198,14 +210,14 @@ hide_edge_borders both
 # finds out, if available)
 bar {
         status_command i3status
-	colors{
-		background $bg-color
-		separator #757575
+	#colors{
+	#	background $bg-color
+	#	separator #757575
 		#			border			background		text
-		focused_workspace	$bg-color		$bg-color		$text-color
-		inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
-		urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
-	}
+	#	focused_workspace	$bg-color		$bg-color		$text-color
+	#	inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
+	#	urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
+	#}
 }
 
 # No border
@@ -215,14 +227,21 @@ default_floating_border none
 # Make mouse doesn't change windows focus
 focus_follows_mouse no
 
-# Printscreen command
-bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
-bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
-
 # Configs for i3-gaps
 gaps inner 10
 gaps outer 10
 smart_gaps on
 
-# Executing picom to add window change effect
-exec picom -f
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
