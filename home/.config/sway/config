@@ -24,11 +24,12 @@ font pango:System San Francisco Display 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
+exec --no-startup-id network-applet --indicator
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -144,8 +145,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 #bindsym $mod+Shift+c restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -174,11 +175,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Printscreen command
+bindsym $mod+x exec grim - | wl-copy
+bindsym $mod+c exec grim -g "$(slurp -d)" - | wl-copy
+
 # Setting background
 output eDP-1
 {
 	#bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-	bg /usr/share/backgrounds/gatenho_2.jpg fill
+	bg /usr/share/backgrounds/skyrim_1.jpg fill
 	resolution 1366x1080
 }
 
