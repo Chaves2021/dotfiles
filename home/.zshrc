@@ -89,4 +89,4 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[assign]=none
 
 #Definindo variável de ambiente
-export TERMINAL=alacritty
+export TERMINAL=termite
