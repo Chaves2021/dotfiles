@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -176,10 +176,10 @@ bindsym $mod+r mode "resize"
 
 #Setting background
 #exec feh --bg-scale /usr/share/backgrounds/pop_os_0.png
-exec feh --bg-scale /usr/share/backgrounds/gatenho_2.jpg
+exec feh --bg-scale /usr/share/backgrounds/swtor_0.png
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
+set $bg-color 	         #000000
+set $inactive-bg-color   #000000
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -216,8 +216,8 @@ default_floating_border none
 focus_follows_mouse no
 
 # Printscreen command
-bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
-bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
+#bindsym $mod+x exec "scrot -u | xclip -selection clipboard -t image/png"
+#bindsym $mod+c exec "scrot -s -u | xclip -selection clipboard -t image/png"
 
 # Configs for i3-gaps
 gaps inner 10
