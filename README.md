@@ -1,2 +1,2 @@
-# Config Files
-Arquivos de configuração do meu SO
+# Dotfiles
+hidden config files of my OS
