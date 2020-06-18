@@ -12,29 +12,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-#Alias
-alias runwebgoat='cd ~/WebGoat && mvn -pl webgoat-server spring-boot:run'
-
-alias runghidra='~/ghidra_9.1_PUBLIC/ghidraRun'
-
-alias remove_orphans='sudo pacman -Rns $(pacman -Qtdq)'
-
-alias peda='gdb'
-
 ##A flag -n é para não rotear a internet
 alias create_new_ap='sudo create_ap -n wlp2s0 Ganesh_Wifi ganeshredes'
 
-##Audio Alias
-alias mute='pamixer -m'
-alias unmute='pamixer -u'
-alias get_volume='pamixer --get-volume-human'
-alias set_volume='pamixer --set-volume'
-
-##Screen alias
-alias set_brightness='xrandr --output eDP-1 --brightness'
-alias screen_mirror_off='xrandr --output eDP-1 --auto --output HDMI-1 --off'
-alias screen_mirror_note_off='xrandr --output eDP-1 --off --output HDMI-1 --auto'
-alias screen_mirror_note_on='xrandr --output eDP-1 --auto --output HDMI-1 --auto'
+alias jadx='~/src/jadx/build/jadx/bin/jadx'
+alias jadx-gui='~/src/jadx/build/jadx/bin/jadx-gui'
 
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -55,9 +37,12 @@ zstyle ':prompt:pure:prompt:*' color cyan
 
 prompt pure
 
+PURE_PROMPT_SYMBOL="➤"
+#PURE_PROMPT_SYMBOL="➜"
+
 #Comando para deixar terminal em apenas uma linha
-prompt_newline='%666v'
-PROMPT=" $PROMPT"
+#prompt_newline='%666v'
+PROMPT="$PROMPT"
 
 #Gerando comando para syntax highlight
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -89,4 +74,6 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[assign]=none
 
 #Definindo variável de ambiente
-export TERMINAL=termite
+export LC_ALL="en_US.UTF-8"
+
+[ -s "/home/caio/.jabba/jabba.sh" ] && source "/home/caio/.jabba/jabba.sh"

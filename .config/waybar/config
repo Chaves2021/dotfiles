@@ -99,12 +99,12 @@
         "bat": "BAT2"
     },
     "network": {
-        "interface": "wlp2s0", // (Optional) To force the use of this interface
+        //"interface": "enp3s0", // (Optional) To force the use of this interface
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        //"format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠"
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "custom/media": {
         "format": "{icon} {}",
