@@ -77,3 +77,4 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 export LC_ALL="en_US.UTF-8"
 
 [ -s "/home/caio/.jabba/jabba.sh" ] && source "/home/caio/.jabba/jabba.sh"
+

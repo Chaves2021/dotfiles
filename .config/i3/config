@@ -47,7 +47,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -b
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -176,7 +176,7 @@ bindsym $mod+r mode "resize"
 
 #Setting background
 #exec feh --bg-scale /usr/share/backgrounds/pop_os_0.png
-exec feh --bg-scale /usr/share/backgrounds/swtor_0.png
+exec feh --bg-scale /usr/share/backgrounds/swtor_1.jpg
 
 set $bg-color 	         #000000
 set $inactive-bg-color   #000000
@@ -196,17 +196,19 @@ hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-	colors{
-		background $bg-color
-		separator #757575
-		#			border			background		text
-		focused_workspace	$bg-color		$bg-color		$text-color
-		inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
-		urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
-	}
-}
+#bar {
+#        status_command i3status
+#	colors{
+#		background $bg-color
+#		separator #757575
+#		#			border			background		text
+#		focused_workspace	$bg-color		$bg-color		$text-color
+#		inactive_workspace	$inactive-bg-color	$inactive-bg-color	$inactive-text-color
+#		urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
+#	}
+#}
+#
+exec_always --no-startup-id ~/.config/polybar/bar.sh
 
 # No border
 default_border none
@@ -216,8 +218,8 @@ default_floating_border none
 focus_follows_mouse no
 
 # Printscreen command
-#bindsym $mod+x exec "scrot -u | xclip -selection clipboard -t image/png"
-#bindsym $mod+c exec "scrot -s -u | xclip -selection clipboard -t image/png"
+bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
+bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
 
 # Configs for i3-gaps
 gaps inner 10
