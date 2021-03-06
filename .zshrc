@@ -15,9 +15,6 @@ compinit
 ##A flag -n é para não rotear a internet
 alias create_new_ap='sudo create_ap -n wlp2s0 Ganesh_Wifi ganeshredes'
 
-alias jadx='~/src/jadx/build/jadx/bin/jadx'
-alias jadx-gui='~/src/jadx/build/jadx/bin/jadx-gui'
-
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -77,4 +74,8 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 export LC_ALL="en_US.UTF-8"
 
 [ -s "/home/caio/.jabba/jabba.sh" ] && source "/home/caio/.jabba/jabba.sh"
+
+alias py=python3.8
+
+export PATH=$PATH:/home/caio/bin:/home/caio/.local/bin
 

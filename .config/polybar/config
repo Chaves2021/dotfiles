@@ -19,7 +19,7 @@ border-bottom-size = 0
 ;----------;
 
 bottom = false
-monitor = eDP-1
+monitor = eDP1
 wm-restack = none
 override-redirect = false
 
@@ -76,7 +76,7 @@ tray-detached = true
 ;;----------;
 ;
 ;bottom = true
-;monitor = eDP-1
+;monitor = eDP1
 ;wm-restack = none
 ;override-redirect = false
 ;

@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Font Awesome", Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif, "Font Awesome 5 Free";
     font-size: 13px;
     min-height: 0;
 }
@@ -77,7 +77,7 @@ window#waybar {
 
 #network {
     background: transparent;
-    color: white
+    color: white;
 }
 
 #network.disconnected {

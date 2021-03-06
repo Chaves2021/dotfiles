@@ -175,8 +175,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Setting background
-#exec feh --bg-scale /usr/share/backgrounds/pop_os_0.png
-exec feh --bg-scale /usr/share/backgrounds/swtor_1.jpg
+exec feh --bg-scale /usr/share/backgrounds/gentoo/gento_3.png
+#exec feh --bg-scale /usr/share/backgrounds/spiderman/spiderman_spiderverse_0.jpg
+#exec feh --bg-scale /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1366x768.png
 
 set $bg-color 	         #000000
 set $inactive-bg-color   #000000

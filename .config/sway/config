@@ -166,22 +166,29 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Printscreen command
-bindsym $mod+x exec grim - | wl-copy
-bindsym $mod+c exec grim -g "$(slurp -d)" - | wl-copy
+bindsym $mod+x exec grim -t png - | wl-copy -t image/png
+bindsym $mod+c exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+
+# Printscreen command
+# bindsym $mod+x exec grim - | wl-copy
+# bindsym $mod+c exec grim -g "$(slurp -d)" - | wl-copy
 
 # Setting background
 output eDP-1
 {
 	#bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-	bg /usr/share/backgrounds/swtor_2.jpg fill
+	bg /usr/share/backgrounds/star_wars/troopers_surf_flipped.jpeg fill
 	resolution 1366x768
 }
+#Just use the second screen
+#output eDP-1 disable
 
-#output HDMI-A-1
-#{
-#	bg /usr/share/backgrounds/swtor_2.jpg fill
-#	resolution 1360x768
-#}
+output HDMI-A-1
+{
+	bg /usr/share/backgrounds/spiderman/spiderman_2.jpg fill
+	resolution 1360x768
+	#resolution 1920x1080
+}
 
 # Keyboard config
 input type:touchpad
