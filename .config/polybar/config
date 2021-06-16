@@ -1,13 +1,17 @@
 [bar/white]
 
+
 ;------------;
 ; DIMENSIONS ;
 ;------------;
 
 width = 100%
-height = 20
+height = 23
 offset-y = 0
 offset-x = 0
+
+module-margin = 1
+module-padding = 1
 
 ;border-top-size = 10
 border-bottom-size = 0
@@ -36,81 +40,25 @@ font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
 ; COLORS ;
 ;--------;
 
-background = 0
+background = #00000000
 foreground = #fff
-border-color = 0
+border-color = #00000000
 
 ;---------------;
 ; MISCELLANEOUS ;
 ;---------------;
 
 fixed-center = true
-;padding-left = 1 
-padding-right = 1
-module-margin = 1
 
-modules-left = i3 backlight
+modules-left = i3
 ;modules-center = i3
-modules-right = wlan cpu memory battery time
+modules-right = wlan cpu memory backlight battery time
 
 tray-position = none
 tray-detached = true
 
-;[bar/mpd]
-;;------------;
-;; DIMENSIONS ;
-;;------------;
-;
-;width = 100%
-;height = 20
-;offset-y = 0
-;offset-x = 0
-;
-;border-top-size = 10
-;border-bottom-size = 0
-;border-right-size = 10
-;border-left-size = 10
-;
-;;----------;
-;; LOCATION ;
-;;----------;
-;
-;bottom = true
-;monitor = eDP1
-;wm-restack = none
-;override-redirect = false
-;
-;;-------;
-;; FONTS ;
-;;-------;
-;
-;font-0 = Hack:size=10;3
-;font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;3"
-;font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;3"
-;font-3 = "Font Awesome 5 Brands:pixelsize=10;3"
-;
-;;--------;
-;; COLORS ;
-;;--------;
-;
-;background = 0
-;foreground = #c5a9f9
-;border-color = 0
-;
-;;---------------;
-;; MISCELLANEOUS ;
-;;---------------;
-;
-;fixed-center = true
-;padding-left = 2 
-;padding-right = 2
-;module-margin = 1.5
-;
-;;modules-left = 
-;modules-center = mpd
-;;modules-right = 
-;
-;
+line-size = 3
+
 ;---------;
 ; MODULES ;
 ;---------;
@@ -122,20 +70,47 @@ pin-workspaces = true
 strip-wsnumbers = true
 enable-scroll = false
 
-label-unfocused-foreground = #afafaf
+label-focused = %name%
 label-focused-foreground = #fff
+label-focused-underline = #0000FF
+label-focused-margin-right = 0.5
+label-focused-margin-left = 0.5
+label-focused-padding-right = 1.5
+label-focused-padding-left = 1.5
+
+label-unfocused = %name%
+label-unfocused-foreground = #afafaf
+label-unfocused-margin-right = 0.5
+label-unfocused-margin-left = 0.5
+label-unfocused-padding-right = 1.5
+label-unfocused-padding-left = 1.5
+
+
+label-urgent = %name%
 label-urgent-foreground = #ff0000
+label-urgent-margin-right = 0.5
+label-urgent-margin-left = 0.5
+label-urgent-padding-right = 1.5
+label-urgent-padding-left = 1.5
+
+label-visible = %name%
+label-visible-margin-right = 0.5
+label-visible-margin-left = 0.5
+label-visible-padding-right = 1.5
+label-visible-padding-left = 1.5
 
 [module/time]
 type = internal/date
 
 interval = 1.0
 
-date = %H:%M
+date = %H:%M
+
+label-margin-right = 1
 
 [module/date]
 type = internal/date
-date =  %e %B-%A
+date = %e %B-%A 
 label = %date%
 
 
@@ -152,9 +127,9 @@ label-discharging = %percentage%%
 label-charging = %percentage%%
 label-full = %percentage%%
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
-format-charging =  <label-charging>
+format-discharging = <label-discharging> <ramp-capacity>
+format-full = <label-full> <ramp-capacity>
+format-charging = <label-charging> 
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -199,15 +174,15 @@ type = internal/backlight
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
-card = radeon_bl0
+card = intel_backlight
 
-format = <ramp> <label>
+format = <label> <ramp>
 
 label = %percentage%%
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 [module/wlan]
 type = internal/network
@@ -216,17 +191,17 @@ interface = wlp2s0
 
 interval = 5
 
-label-connected =  %essid%
-label-disconnected =  Not Connected
+label-connected = %essid% 
+label-disconnected = Not Connected 
 
 [module/cpu]
 type = internal/cpu
-label =  %percentage%%
+label = %percentage%% 
 
 
 [module/memory]
 type = internal/memory
-label =  %gb_used%
+label = %gb_used% 
 
 [module/network]
 type = internal/network

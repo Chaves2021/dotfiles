@@ -78,4 +78,3 @@ export LC_ALL="en_US.UTF-8"
 alias py=python3.8
 
 export PATH=$PATH:/home/caio/bin:/home/caio/.local/bin
-

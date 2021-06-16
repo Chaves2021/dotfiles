@@ -185,7 +185,7 @@ output eDP-1
 
 output HDMI-A-1
 {
-	bg /usr/share/backgrounds/spiderman/spiderman_2.jpg fill
+	bg /usr/share/backgrounds/star_wars/troopers_surf_flipped.jpeg fill
 	resolution 1360x768
 	#resolution 1920x1080
 }

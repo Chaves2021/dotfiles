@@ -175,7 +175,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Setting background
-exec feh --bg-scale /usr/share/backgrounds/gentoo/gento_3.png
+exec feh --bg-scale /usr/share/backgrounds/star_wars/troopers_surf_flipped.jpeg
 #exec feh --bg-scale /usr/share/backgrounds/spiderman/spiderman_spiderverse_0.jpg
 #exec feh --bg-scale /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1366x768.png
 
