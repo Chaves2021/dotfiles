@@ -227,4 +227,4 @@ gaps inner 10
 smart_gaps on
 
 # Executing picom to add window change effect
-exec picom -f --experimental-backends --transparent-clipping
+exec picom -f #--experimental-backends --transparent-clipping
