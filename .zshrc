@@ -13,7 +13,7 @@ compinit
 # End of lines added by compinstall
 
 ##A flag -n é para não rotear a internet
-alias create_new_ap='sudo create_ap -n wlp2s0 Ganesh_Wifi ganeshredes'
+alias create_new_ap='sudo create_ap -n wlp2s0 Ganesh_Wifi senha_super_segura'
 
 #Comandos para acessibilidade
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -74,5 +74,6 @@ ZSH_HIGHLIGHT_STYLES[assign]=none
 export LC_ALL="en_US.UTF-8"
 
 [ -s "/home/caio/.jabba/jabba.sh" ] && source "/home/caio/.jabba/jabba.sh"
+
 
 export PATH=$PATH:/home/caio/bin:/home/caio/.local/bin

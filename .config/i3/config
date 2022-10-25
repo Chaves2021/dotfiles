@@ -220,6 +220,7 @@ focus_follows_mouse no
 # Printscreen command
 bindsym $mod+x exec "maim -u | xclip -selection clipboard -t image/png"
 bindsym $mod+c exec "maim -s -u | xclip -selection clipboard -t image/png"
+bindsym $mod+p exec "maim -s -u /home/caio/Desktop/Imagens/$(date +%s).png"
 
 # Configs for i3-gaps
 gaps inner 10

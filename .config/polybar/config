@@ -1,4 +1,4 @@
-[bar/white]
+[bar/caio]
 
 
 ;------------;
@@ -32,9 +32,9 @@ override-redirect = false
 ;-------;
 
 font-0 = Hack:size=10;3
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
+font-1 = "Font Awesome 6 Free:style=Solid:pixelsize=12;3"
+font-2 = "Font Awesome 6 Free:style=Regular:pixelsize=12;3"
+font-3 = "Font Awesome 6 Brands:pixelsize=12;3"
 
 ;--------;
 ; COLORS ;
@@ -210,7 +210,7 @@ label-connected =  %downspeed% |  %upspeed%
 
 [bar/float]
 
-inherit = bar/white
+inherit = bar/caio
 
 background = #ffffff
 

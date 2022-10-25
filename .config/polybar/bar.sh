@@ -1,4 +1,4 @@
 #!/bin/sh
 
 killall polybar
-polybar white
+polybar caio
